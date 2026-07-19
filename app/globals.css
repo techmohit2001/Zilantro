@@ -2,25 +2,96 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --gold: #B8924A;
+  --gold-hover: #a68342;
+  --beige: #f5f0eb;
+  --beige-dark: #ede8e0;
+  --charcoal: #1a1a1a;
+  --charcoal-light: #2d2d2d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-beige: var(--beige);
+  --color-beige-dark: var(--beige-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
   --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-playfair);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-outfit: var(--font-outfit-family);
+  --font-cormorant: var(--font-cormorant-family);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.architecture-heading {
+  background-image: url("/home-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: default;
+  transition: background-size 0.6s ease;
+}
+
+.architecture-heading:hover {
+  background-size: 130%;
+}
+
+@keyframes hero-heading-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-33.333333%, 0, 0);
+  }
+}
+
+.hero-heading-marquee-wrap {
+  width: 100%;
+}
+
+.hero-heading-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: hero-heading-marquee 50s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-heading-marquee-track {
+    animation-duration: 80s;
+  }
+}
+
+@keyframes client-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.client-marquee-track {
+  animation: client-marquee 28s linear infinite;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-marquee-track {
+    animation: none;
+  }
 }
