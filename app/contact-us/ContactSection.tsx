@@ -54,6 +54,14 @@ export default function ContactSection() {
     const form = event.currentTarget;
     setStatus("submitting");
 
+    if (!GOOGLE_SHEET_ENDPOINT) {
+      console.error(
+        "NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT is missing. Add it in your host env and redeploy.",
+      );
+      setStatus("error");
+      return;
+    }
+
     try {
       const formData = new FormData(form);
       await fetch(GOOGLE_SHEET_ENDPOINT, {
