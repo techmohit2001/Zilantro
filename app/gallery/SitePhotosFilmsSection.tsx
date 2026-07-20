@@ -3,33 +3,33 @@ import Link from "next/link";
 
 const images = [
   {
-    src: "/gallery-sitephoto1.png",
-    hoverSrc: "/gallery-sitephoto4.png",
+    src: "/gallery-sitephoto7.png",
+    hoverSrc: "/gallery-sitephoto1.png",
     alt: "Interior with circular wall feature",
   },
   {
-    src: "/gallery-sitephoto2.png",
-    hoverSrc: "/gallery-sitephoto5.png",
+    src: "/gallery-sitephoto8.png",
+    hoverSrc: "/gallery-sitephoto2.png",
     alt: "Arched wall feature during renovation",
   },
   {
-    src: "/gallery-sitephoto3.png",
-    hoverSrc: "/gallery-sitephoto6.png",
+    src: "/gallery-sitephoto9.png",
+    hoverSrc: "/gallery-sitephoto3.png",
     alt: "Tiled interior with exposed plumbing",
   },
   {
-    src: "/gallery-sitephoto4.png",
-    hoverSrc: "/gallery-sitephoto1.png",
+    src: "/gallery-sitephoto10.png",
+    hoverSrc: "/gallery-sitephoto4.png",
     alt: "Kitchen cabinetry installation in progress",
   },
   {
-    src: "/gallery-sitephoto5.png",
-    hoverSrc: "/gallery-sitephoto2.png",
+    src: "/gallery-sitephoto11.png",
+    hoverSrc: "/gallery-sitephoto5.png",
     alt: "Room under construction with exposed wiring",
   },
   {
-    src: "/gallery-sitephoto6.png",
-    hoverSrc: "/gallery-sitephoto3.png",
+    src: "/gallery-sitephoto12.png",
+    hoverSrc: "/gallery-sitephoto6.png",
     alt: "Interior renovation with metal framing",
   },
 ];

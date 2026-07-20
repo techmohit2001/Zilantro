@@ -5,18 +5,18 @@ import { useState } from "react";
 
 const images = [
   {
-    src: "/gallery-palms1.png",
-    hoverSrc: "/gallery-palms2.png",
+    src: "/gallery-palms4.png",
+    hoverSrc: "/gallery-palms1.png",
     alt: "Palms & Pebbles — entrance stairs and arched doorway",
   },
   {
-    src: "/gallery-palms3.png",
+    src: "/gallery-palms5.png",
     hoverSrc: "/gallery-palms3.png",
     alt: "Palms & Pebbles — courtyard with tree and hills",
   },
   {
-    src: "/gallery-palms2.png",
-    hoverSrc: "/gallery-palms1.png",
+    src: "/gallery-palms6.png",
+    hoverSrc: "/gallery-palms2.png",
     alt: "Palms & Pebbles — building exterior with rocky terrain",
   },
 ];

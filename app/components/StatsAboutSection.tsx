@@ -24,14 +24,14 @@ const stats = [
     icon: "/home-aboutsection4.png",
   },
   {
-    value: "Globally",
-    label: "Project Reach",
+    value: "India",
+    label: "Global Reach",
     icon: "/home-aboutsection5.png",
   },
   {
-    value: "Globally",
-    label: "Project Reach",
-    icon: "/home-aboutsection5.png",
+    value: "North America",
+    label: "Global Reach",
+    icon: "/home-aboutsection6.png",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function StatsAboutSection() {
                     />
                   </div>
                   <span
-                    className={`${outfitSemibold.className} text-2xl leading-none text-gold sm:text-3xl lg:text-4xl`}
+                    className={`${outfitSemibold.className} whitespace-nowrap text-2xl leading-none text-gold sm:text-3xl lg:text-4xl`}
                   >
                     {stat.value}
                   </span>
