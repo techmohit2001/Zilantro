@@ -41,8 +41,11 @@ const contactDetails = [
 const inputClassName =
   "w-full border border-[#E5E0D8] bg-white px-3.5 py-2.5 font-outfit text-sm text-charcoal placeholder:text-gray-400 outline-none transition-colors focus:border-gold";
 
+// Public Apps Script web app URL (same as NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT).
+// Fallback keeps live working when the host env var is not configured.
 const GOOGLE_SHEET_ENDPOINT =
-  process.env.NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT ?? "";
+  process.env.NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT ||
+  "https://script.google.com/macros/s/AKfycbyE2dQNa4Y2lbPbXcGPHzw5BfWNuWEO6E3L_YfP3Br4I2lkiwWxXQ78zlZT8rhuurg/exec";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -53,14 +56,6 @@ export default function ContactSection() {
     event.preventDefault();
     const form = event.currentTarget;
     setStatus("submitting");
-
-    if (!GOOGLE_SHEET_ENDPOINT) {
-      console.error(
-        "NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT is missing. Add it in your host env and redeploy.",
-      );
-      setStatus("error");
-      return;
-    }
 
     try {
       const formData = new FormData(form);
