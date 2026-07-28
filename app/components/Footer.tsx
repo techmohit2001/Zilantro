@@ -100,15 +100,13 @@ export default function Footer() {
               Building Dreams, Constructing Trust full scope construction
               and MEPF solutions delivered across India.
             </p>
-            <div className="inline-block bg-white px-5 py-4">
-              <Image
-                src="/home-footer.png"
-                alt="Zilantro"
-                width={180}
-                height={60}
-                className="h-auto w-44"
-              />
-            </div>
+            <Image
+              src="/home-footer.png"
+              alt="Zilantro"
+              width={180}
+              height={80}
+              className="h-auto w-44"
+            />
           </div>
 
           <div className="flex flex-1 flex-wrap gap-10 sm:gap-x-12 lg:justify-between lg:gap-y-10 xl:gap-x-16">
@@ -147,22 +145,24 @@ export default function Footer() {
             <h3 className="mb-5 font-outfit text-base font-medium text-[#B8924A] lg:whitespace-nowrap">
               Contact
             </h3>
-            <ul className="space-y-3 text-white">
-              <li>Sector 58, Gurugram</li>
+            <ul className="space-y-5 text-white">
+              <li className="leading-relaxed">
+                Magnum Global
+                <br />
+                Park, Golf Course
+                <br />
+                Ext Rd, Sector 58,
+                <br />
+                Gurugram,
+                <br />
+                Haryana – 122005
+              </li>
               <li>
                 <a
                   href="mailto:info@zilantro.ai"
                   className="text-white transition-colors hover:text-white/80"
                 >
-                  info@zilantro.ai
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+13105550199"
-                  className="text-white transition-colors hover:text-white/80"
-                >
-                  +1-310-555-0199
+                  info@Zilantro.ai
                 </a>
               </li>
             </ul>

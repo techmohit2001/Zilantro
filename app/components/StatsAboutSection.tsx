@@ -42,7 +42,7 @@ export default function StatsAboutSection() {
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="group w-full self-start">
             <Image
-              src="/home-abousection1.png"
+              src="/home-aboutsection1.png"
               alt="Luxurious hotel lobby with marble pillars and chandeliers"
               width={820}
               height={703}
