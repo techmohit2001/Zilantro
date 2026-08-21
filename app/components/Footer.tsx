@@ -9,17 +9,28 @@ const quickLinks = [
 ];
 
 const services = [
-  "Mechanical Construction",
-  "Electrical Construction",
-  "Plumbing Construction",
-  "Interior Design",
-  "Fire Protection",
-  "Civil Contracting",
-  "Architecture",
   "Structural Engineering",
-  "BIM Services",
+  "Civil Contracting",
+  "Interior Design",
   "Design & Build",
   "General Contracting",
+  "Mechanical HVAC",
+  "Electrical",
+  "Plumbing",
+  "Fire Protection",
+  "FAS & IT",
+  "Architecture",
+  "BIM Services",
+  "Energy Recovery Ventilation",
+];
+
+const offices = [
+  "Magnum Global Park, Golf Course Ext Rd, Sector 58, Gurugram, Haryana – 122005",
+  "7703 N Lamar Blvd #615, Austin, TX 78752, USA",
+  "330 5th Avenue SW #1800, Calgary, AB T2P 0L3, Canada",
+  "8911 N Capital of Texas Hwy, Austin, TX 78759, USA.",
+  "60 Atlantic Ave, Suite 200 Toronto, ON M6K 1X9, CA.",
+  "13555 South East 36th Street, Suite 100, Bellevue, WA 98006, USA.",
 ];
 
 const socialLinks = [
@@ -42,24 +53,6 @@ const socialLinks = [
     ),
   },
   {
-    label: "X",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
-    ),
-  },
-  {
-    label: "YouTube",
-    href: "#",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-      </svg>
-    ),
-  },
-  {
     label: "LinkedIn",
     href: "#",
     icon: (
@@ -77,7 +70,7 @@ export default function Footer() {
         {/* Top CTA section */}
         <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">
-            <p className="mb-4 text-white">Why Zilantro</p>
+            <p className="mb-4 text-white">WHY ZILANTO</p>
             <h2 className="font-cormorant text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-tight text-white">
               Have a project in mind?
               <br />
@@ -109,8 +102,8 @@ export default function Footer() {
             />
           </div>
 
-          <div className="flex flex-1 flex-wrap gap-10 sm:gap-x-12 lg:justify-between lg:gap-y-10 xl:gap-x-16">
-          <div className="w-full min-w-0 sm:w-max sm:shrink-0">
+          <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[auto_minmax(0,1fr)_minmax(0,1.4fr)_auto] lg:gap-8 xl:gap-10">
+          <div className="min-w-0">
             <h3 className="mb-5 font-outfit text-base font-medium text-[#B8924A] lg:whitespace-nowrap">
               Quick links
             </h3>
@@ -128,7 +121,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="w-full min-w-0 sm:w-max sm:shrink-0">
+          <div className="min-w-0">
             <h3 className="mb-5 font-outfit text-base font-medium text-[#B8924A] lg:whitespace-nowrap">
               Services
             </h3>
@@ -141,34 +134,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="w-full min-w-0 sm:w-max sm:shrink-0">
+          <div className="min-w-0">
             <h3 className="mb-5 font-outfit text-base font-medium text-[#B8924A] lg:whitespace-nowrap">
-              Contact
+              Global Presence
             </h3>
             <ul className="space-y-5 text-white">
-              <li className="leading-relaxed">
-                Magnum Global
-                <br />
-                Park, Golf Course
-                <br />
-                Ext Rd, Sector 58,
-                <br />
-                Gurugram,
-                <br />
-                Haryana – 122005
-              </li>
-              <li>
-                <a
-                  href="mailto:info@zilantro.ai"
-                  className="text-white transition-colors hover:text-white/80"
-                >
-                  info@Zilantro.ai
-                </a>
-              </li>
+              {offices.map((office) => (
+                <li key={office} className="leading-relaxed">
+                  {office}
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="w-full min-w-0 sm:w-max sm:shrink-0">
+          <div className="min-w-0">
             <h3 className="mb-5 font-outfit text-base font-medium text-[#B8924A] lg:whitespace-nowrap">
               Get in Touch
             </h3>
@@ -191,7 +170,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 py-6 text-sm text-white sm:flex-row sm:items-center">
           <p className="break-words">
-            &copy; 2025 Zilantro Private Limited. All rights reserved.
+            &copy; 2026 Zilantro Private Limited. All rights reserved.
           </p>
           <p>
             <a

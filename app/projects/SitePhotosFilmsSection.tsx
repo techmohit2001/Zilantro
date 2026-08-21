@@ -1,38 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import InteriorProjectCard from "./InteriorProjectCard";
+import { interiorProjects } from "./interiorProjects";
 
-const images = [
-  {
-    src: "/gallery-sitephoto7.png",
-    hoverSrc: "/gallery-sitephoto1.png",
-    alt: "Interior with circular wall feature",
-  },
-  {
-    src: "/gallery-sitephoto8.png",
-    hoverSrc: "/gallery-sitephoto2.png",
-    alt: "Arched wall feature during renovation",
-  },
-  {
-    src: "/gallery-sitephoto9.png",
-    hoverSrc: "/gallery-sitephoto3.png",
-    alt: "Tiled interior with exposed plumbing",
-  },
-  {
-    src: "/gallery-sitephoto10.png",
-    hoverSrc: "/gallery-sitephoto4.png",
-    alt: "Kitchen cabinetry installation in progress",
-  },
-  {
-    src: "/gallery-sitephoto11.png",
-    hoverSrc: "/gallery-sitephoto5.png",
-    alt: "Room under construction with exposed wiring",
-  },
-  {
-    src: "/gallery-sitephoto12.png",
-    hoverSrc: "/gallery-sitephoto6.png",
-    alt: "Interior renovation with metal framing",
-  },
-];
+const previewProjects = interiorProjects.slice(0, 6);
 
 export default function SitePhotosFilmsSection() {
   return (
@@ -59,34 +29,16 @@ export default function SitePhotosFilmsSection() {
             </p>
           </div>
           <Link
-            href="/#services"
+            href="/interior-projects"
             className="inline-flex w-full shrink-0 items-center justify-center bg-gold px-6 py-2.5 text-base font-medium text-white transition-colors hover:bg-gold-hover sm:w-auto sm:text-[18px]"
           >
-            See All Services
+            View All
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {images.map((image) => (
-            <div
-              key={image.src}
-              className="group relative aspect-[4/3] overflow-hidden border border-white sm:border-2"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-opacity duration-500 group-hover:opacity-0"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <Image
-                src={image.hoverSrc}
-                alt={image.alt}
-                fill
-                className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
+          {previewProjects.map((project) => (
+            <InteriorProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

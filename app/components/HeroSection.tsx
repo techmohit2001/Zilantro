@@ -39,20 +39,20 @@ export default function HeroSection() {
         <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="min-w-0">
             <p className="mb-6 max-w-xl text-base leading-[1.65] text-gray-600 sm:text-[21px] lg:max-w-none">
-              Zilantro delivers end-to-end construction solutions with
+              Zilantro Private Limited delivers end-to-end construction solutions with
               precision, accountability, and uncompromising craftsmanship. From
               critical MEPF installations to complete structural builds, we
               deliver projects made to last.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="#services"
+                href="/services"
                 className="bg-gold px-6 py-3 text-base font-medium text-white transition-colors hover:bg-gold-hover"
               >
                 Our Services
               </Link>
               <Link
-                href="#gallery"
+                href="/projects"
                 className="bg-gold px-6 py-3 text-base font-medium text-white transition-colors hover:bg-gold-hover"
               >
                 View Our Work

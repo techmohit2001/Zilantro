@@ -47,7 +47,7 @@ export default function AboutHeroSection() {
 
           <div className="border-t border-gold pt-6">
             <p className="text-base leading-relaxed text-[#4A4A4A] sm:text-[17px]">
-              Zilantro is a full-service Commercial Construction, Design-Build,
+              Zilantro Private Limited is a full-service Commercial Construction, Design-Build,
               and General Contracting company headquartered in Gurugram,
               delivering projects across India. We focus on MEPF systems,
               structural civil works, commercial interiors, and complete project

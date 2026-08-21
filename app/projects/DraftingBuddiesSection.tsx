@@ -1,44 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
+import DraftingProjectCard from "./DraftingProjectCard";
+import { draftingProjects } from "./draftingProjects";
 
-const projects = [
-  {
-    category: "Industrial",
-    title: "Tesla Manufacturing Building",
-    src: "/gallery-drafting1.png",
-    alt: "Aerial view of Tesla manufacturing facility",
-  },
-  {
-    category: "Industrial",
-    title: "Amazon Warehouse PVD2",
-    src: "/gallery-drafting2.png",
-    alt: "Amazon warehouse exterior",
-  },
-  {
-    category: "Entertainment",
-    title: "Universal Studios Florida",
-    src: "/gallery-drafting3.png",
-    alt: "Universal Studios Florida entrance",
-  },
-  {
-    category: "Healthcare",
-    title: "Umc Health & Wellness Centre",
-    src: "/gallery-drafting4.png",
-    alt: "UMC Health & Wellness Centre building",
-  },
-  {
-    category: "Transport",
-    title: "Ferrero Chocolate Factory",
-    src: "/gallery-drafting5.png",
-    alt: "Ferrero chocolate factory building",
-  },
-  {
-    category: "Hotels",
-    title: "MNGE Eufaula & Casino Hotel",
-    src: "/gallery-drafting6.png",
-    alt: "MNGE Eufaula casino hotel aerial view",
-  },
-];
+const previewProjects = draftingProjects.slice(0, 6);
 
 export default function DraftingBuddiesSection() {
   return (
@@ -65,34 +29,16 @@ export default function DraftingBuddiesSection() {
             </p>
           </div>
           <Link
-            href="/#services"
+            href="/latest-project"
             className="inline-flex w-full shrink-0 items-center justify-center bg-gold px-6 py-2.5 text-base font-medium text-white transition-colors hover:bg-gold-hover sm:w-auto sm:text-[18px]"
           >
-            See All Services
+            View All
           </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
-          {projects.map((project) => (
-            <article
-              key={project.title}
-              className="group relative aspect-[3/2] overflow-hidden"
-            >
-              <Image
-                src={project.src}
-                alt={project.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-              <span className="absolute top-0 left-0 bg-gold px-2.5 py-1.5 text-[11px] font-medium uppercase tracking-wider text-white sm:px-3 sm:py-2 sm:text-xs">
-                {project.category}
-              </span>
-              <h3 className="absolute bottom-3 left-3 right-3 font-outfit text-base font-medium text-white sm:bottom-4 sm:left-4 sm:right-4 sm:text-lg">
-                {project.title}
-              </h3>
-            </article>
+          {previewProjects.map((project) => (
+            <DraftingProjectCard key={project.src} project={project} />
           ))}
         </div>
       </div>

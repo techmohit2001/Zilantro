@@ -5,57 +5,12 @@ import { useState } from "react";
 
 const services = [
   {
-    title: "Mechanical Construction",
-    image: "/services-cards1.png",
-    imageAlt: "Construction workers on scaffolding at a building site",
-    icon: "/service-cardicon1.png",
-    description:
-      "HVAC, ventilation, and climate control systems engineered and installed to perform well and meet code, keeping buildings comfortable and running efficiently.",
-    tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
-  },
-  {
-    title: "Electrical Construction",
-    image: "/services-cards2.png",
-    imageAlt: "Interior construction with conduit and scaffolding",
-    icon: "/service-cardicon2.png",
-    description:
-      "Complete electrical systems, from power distribution to lighting and low-voltage wiring, installed to the highest safety and code standards.",
-    tags: ["RCC Structure", "Commercial", "Residential"],
-  },
-  {
-    title: "Plumbing Construction",
-    image: "/services-cards3.png",
-    imageAlt: "Site team reviewing plans near piping installation",
+    title: "Structural Engineering",
+    image: "/services-cards9.png",
+    imageAlt: "Steel structural framework of a building under construction",
     icon: "/service-cardicon3.png",
     description:
-      "Full plumbing systems for commercial and institutional buildings, covering supply and drainage lines, fixture installation, and compliance testing.",
-    tags: ["Civil Works", "Excavation", "Site Prep"],
-  },
-  {
-    title: "Interior Design",
-    image: "/services-cards5.png",
-    imageAlt: "Modern commercial interior lobby design",
-    icon: "/service-cardicon1.png",
-    description:
-      "Functional, on-brand interiors for offices, retail, and hospitality spaces, designed to improve experience and support your business goals.",
-    tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
-  },
-  {
-    title: "General Contracting",
-    image: "/services-cards4.png",
-    imageAlt: "Large commercial construction site with workers",
-    icon: "/service-cardicon2.png",
-    description:
-      "We manage every part of construction execution, scheduling, site management, trade coordination, & quality assurance, delivered safely & to the highest standard of workmanship.",
-    tags: ["RCC Structure", "Commercial", "Residential"],
-  },
-  {
-    title: "Fire Protection",
-    image: "/services-cards6.png",
-    imageAlt: "Fire suppression piping and sprinkler system",
-    icon: "/service-cardicon3.png",
-    description:
-      "Fire detection and suppression systems designed and installed to meet code requirements and keep people and property safe.",
+      "Structural design and analysis that keep every building strong, from foundation to full envelope, engineered for safety and durability.",
     tags: ["Civil Works", "Excavation", "Site Prep"],
   },
   {
@@ -68,22 +23,13 @@ const services = [
     tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
   },
   {
-    title: "Architecture",
-    image: "/services-cards8.png",
-    imageAlt: "Architect sketching a modern house design on a tablet",
-    icon: "/service-cardicon2.png",
+    title: "Interior Design",
+    image: "/services-cards5.png",
+    imageAlt: "Modern commercial interior lobby design",
+    icon: "/service-cardicon1.png",
     description:
-      "Design services that turn your vision into buildable plans, balancing form, function, and feasibility from concept through construction documents.",
-    tags: ["RCC Structure", "Commercial", "Residential"],
-  },
-  {
-    title: "Structural Engineering",
-    image: "/services-cards9.png",
-    imageAlt: "Steel structural framework of a building under construction",
-    icon: "/service-cardicon3.png",
-    description:
-      "Structural design and analysis that keep every building strong, from foundation to full envelope, engineered for safety and durability.",
-    tags: ["Civil Works", "Excavation", "Site Prep"],
+      "Functional, on-brand interiors for offices, retail, and hospitality spaces, designed to improve experience and support your business goals.",
+    tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
   },
   {
     title: "Design & Build",
@@ -95,6 +41,69 @@ const services = [
     tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
   },
   {
+    title: "General Contracting",
+    image: "/services-cards4.png",
+    imageAlt: "Large commercial construction site with workers",
+    icon: "/service-cardicon2.png",
+    description:
+      "We manage every part of construction execution, scheduling, site management, trade coordination, & quality assurance, delivered safely & to the highest standard of workmanship.",
+    tags: ["RCC Structure", "Commercial", "Residential"],
+  },
+  {
+    title: "Mechanical HVAC",
+    image: "/services-cards1.png",
+    imageAlt: "Construction workers on scaffolding at a building site",
+    icon: "/service-cardicon1.png",
+    description:
+      "HVAC, ventilation, and climate control systems engineered and installed to perform well and meet code, keeping buildings comfortable and running efficiently.",
+    tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
+  },
+  {
+    title: "Electrical",
+    image: "/services-cards2.png",
+    imageAlt: "Interior construction with conduit and scaffolding",
+    icon: "/service-cardicon2.png",
+    description:
+      "Complete electrical systems, from power distribution to lighting and low-voltage wiring, installed to the highest safety and code standards.",
+    tags: ["RCC Structure", "Commercial", "Residential"],
+  },
+  {
+    title: "Plumbing",
+    image: "/services-cards3.png",
+    imageAlt: "Site team reviewing plans near piping installation",
+    icon: "/service-cardicon3.png",
+    description:
+      "Full plumbing systems for commercial and institutional buildings, covering supply and drainage lines, fixture installation, and compliance testing.",
+    tags: ["Civil Works", "Excavation", "Site Prep"],
+  },
+  {
+    title: "Fire Protection",
+    image: "/services-cards6.png",
+    imageAlt: "Fire suppression piping and sprinkler system",
+    icon: "/service-cardicon3.png",
+    description:
+      "Fire detection and suppression systems designed and installed to meet code requirements and keep people and property safe.",
+    tags: ["Civil Works", "Excavation", "Site Prep"],
+  },
+  {
+    title: "FAS & IT",
+    image: "/about-abouthero2.png",
+    imageAlt: "Modern building interior with integrated lighting and systems",
+    icon: "/service-cardicon1.png",
+    description:
+      "Fire alarm and IT infrastructure designed and installed as one coordinated system, covering detection, communication, and structured cabling.",
+    tags: ["HVAC", "Electrical", "Fire Safety", "Plumbing"],
+  },
+  {
+    title: "Architecture",
+    image: "/services-cards8.png",
+    imageAlt: "Architect sketching a modern house design on a tablet",
+    icon: "/service-cardicon2.png",
+    description:
+      "Design services that turn your vision into buildable plans, balancing form, function, and feasibility from concept through construction documents.",
+    tags: ["RCC Structure", "Commercial", "Residential"],
+  },
+  {
     title: "BIM Services",
     image: "/services-cards11.png",
     imageAlt: "Professional reviewing a 3D BIM model of a building",
@@ -102,6 +111,15 @@ const services = [
     description:
       "3D modeling and coordination across all building systems, reducing conflicts, improving accuracy, and streamlining construction from day one.",
     tags: ["RCC Structure", "Commercial", "Residential"],
+  },
+  {
+    title: "Energy Recovery Ventilation (ERV)",
+    image: "/gallery-sitephoto1.png",
+    imageAlt: "Mechanical and ventilation systems during building fit-out",
+    icon: "/service-cardicon3.png",
+    description:
+      "Energy recovery ventilation systems that recapture heat and moisture from exhaust air, improving indoor air quality while reducing energy use.",
+    tags: ["Concept & Schematic Design", "Space Planning"],
   },
 ];
 
