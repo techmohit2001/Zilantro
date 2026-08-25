@@ -18,7 +18,7 @@ const services = [
   "Electrical",
   "Plumbing",
   "Fire Protection",
-  "FAS & IT",
+  "Fapas & IT",
   "Architecture",
   "BIM Services",
   "Energy Recovery Ventilation",
@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Top CTA section */}
         <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-xl">
-            <p className="mb-4 text-white">WHY ZILANTO</p>
+            <p className="mb-4 text-white">WHY ZILANTRO</p>
             <h2 className="font-cormorant text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-tight text-white">
               Have a project in mind?
               <br />

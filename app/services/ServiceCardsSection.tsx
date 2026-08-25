@@ -86,7 +86,7 @@ const services = [
     tags: ["Civil Works", "Excavation", "Site Prep"],
   },
   {
-    title: "FAS & IT",
+    title: "Fapas & IT",
     image: "/about-abouthero2.png",
     imageAlt: "Modern building interior with integrated lighting and systems",
     icon: "/service-cardicon1.png",
