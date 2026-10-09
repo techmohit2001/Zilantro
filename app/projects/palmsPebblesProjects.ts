@@ -12,7 +12,7 @@ export const palmsPebblesProjects: PalmsPebblesPhoto[] = [
   },
   {
     src: "/gallery-palms5.png",
-    hoverSrc: "/gallery-palms3.png",
+    hoverSrc: "/gallery-palms2.png",
     alt: "Palms & Pebbles — entrance drive with palms and mountains",
   },
   {

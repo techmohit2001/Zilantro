@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const team = [
-  { name: "Lucky Tanwar", role: "Director", src: "/about-team1.png" },
+  //{ name: "Lucky Tanwar", role: "Director", src: "/about-team1.png" },
   { name: "Kavinder Kasana", role: "Director", src: "/about-team2.png" },
   { name: "Sunil Nanda", role: "Director of Preconstruction", src: "/about-team3.png" },
   { name: "Vineet Kasana", role: "VP of Construction", src: "/about-team4.png" },
   { name: "Gautam Sharma", role: "VDC Manager", src: "/about-team6.png" },
   { name: "Sachin Kumar", role: "Project Manager", src: "/about-team8.png" },
   { name: "Aman Kumar", role: "Project Manager", src: "/about-team7.png" },
-  { name: "Shikha Sharma", role: "HR / Admin Head", src: "/about-team9.png" },
+  //{ name: "Shikha Sharma", role: "HR / Admin Head", src: "/about-team9.png" },
   { name: "Vidushi Yadav", role: "Marketing Manager", src: "/about-team11.png" },
   { name: "Nakul Dhaima", role: "Site Supervisor", src: "/about-team10.png" },
   { name: "Kaptan Singh", role: "Site Supervisor", src: "/about-team12.png" },
