@@ -27,10 +27,6 @@ export default function AboutHeroSection() {
               className="object-cover transition-transform duration-600 ease-out group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, 68vw"
             />
-            <span
-              className="pointer-events-none absolute bottom-3 right-3 h-2.5 w-2.5 rotate-45 bg-[#E8E2D6] sm:bottom-4 sm:right-4"
-              aria-hidden="true"
-            />
           </div>
         </div>
 
